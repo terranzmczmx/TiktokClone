@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		201D7FC22C893E860022656F /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D7FC12C893E860022656F /* FeedCell.swift */; };
+		201D7FDE2C8985350022656F /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D7FDD2C8985350022656F /* ExploreView.swift */; };
+		201D7FE02C89854B0022656F /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D7FDF2C89854B0022656F /* UserCell.swift */; };
 		20D029EE2C87C616000433D2 /* TiktokCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D029ED2C87C616000433D2 /* TiktokCloneApp.swift */; };
 		20D029F02C87C616000433D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D029EF2C87C616000433D2 /* ContentView.swift */; };
 		20D029F22C87C618000433D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20D029F12C87C618000433D2 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		201D7FC12C893E860022656F /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		201D7FDD2C8985350022656F /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		201D7FDF2C89854B0022656F /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		20D029EA2C87C616000433D2 /* TiktokClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TiktokClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D029ED2C87C616000433D2 /* TiktokCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiktokCloneApp.swift; sourceTree = "<group>"; };
 		20D029EF2C87C616000433D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 		20D02A042C87C780000433D2 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				201D7FDD2C8985350022656F /* ExploreView.swift */,
+				201D7FDF2C89854B0022656F /* UserCell.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -278,7 +284,9 @@
 				201D7FC22C893E860022656F /* FeedCell.swift in Sources */,
 				20D029F02C87C616000433D2 /* ContentView.swift in Sources */,
 				20D029EE2C87C616000433D2 /* TiktokCloneApp.swift in Sources */,
+				201D7FDE2C8985350022656F /* ExploreView.swift in Sources */,
 				20D02A0D2C87DA85000433D2 /* MainTabView.swift in Sources */,
+				201D7FE02C89854B0022656F /* UserCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
