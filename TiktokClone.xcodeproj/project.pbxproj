@@ -7,20 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		201D7FC22C893E860022656F /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D7FC12C893E860022656F /* FeedCell.swift */; };
 		20D029EE2C87C616000433D2 /* TiktokCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D029ED2C87C616000433D2 /* TiktokCloneApp.swift */; };
 		20D029F02C87C616000433D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D029EF2C87C616000433D2 /* ContentView.swift */; };
 		20D029F22C87C618000433D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20D029F12C87C618000433D2 /* Assets.xcassets */; };
 		20D029F52C87C618000433D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20D029F42C87C618000433D2 /* Preview Assets.xcassets */; };
 		20D02A0D2C87DA85000433D2 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D02A0C2C87DA85000433D2 /* MainTabView.swift */; };
+		20D02A0F2C88FEE5000433D2 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D02A0E2C88FEE5000433D2 /* FeedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		201D7FC12C893E860022656F /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		20D029EA2C87C616000433D2 /* TiktokClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TiktokClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D029ED2C87C616000433D2 /* TiktokCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiktokCloneApp.swift; sourceTree = "<group>"; };
 		20D029EF2C87C616000433D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		20D029F12C87C618000433D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20D029F42C87C618000433D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		20D02A0C2C87DA85000433D2 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		20D02A0E2C88FEE5000433D2 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,8 @@
 		20D02A082C87C78A000433D2 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				20D02A0E2C88FEE5000433D2 /* FeedView.swift */,
+				201D7FC12C893E860022656F /* FeedCell.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -268,6 +274,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20D02A0F2C88FEE5000433D2 /* FeedView.swift in Sources */,
+				201D7FC22C893E860022656F /* FeedCell.swift in Sources */,
 				20D029F02C87C616000433D2 /* ContentView.swift in Sources */,
 				20D029EE2C87C616000433D2 /* TiktokCloneApp.swift in Sources */,
 				20D02A0D2C87DA85000433D2 /* MainTabView.swift in Sources */,
@@ -407,6 +415,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -436,6 +445,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
