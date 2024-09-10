@@ -16,6 +16,9 @@
 		201D7FE82C8BB4DE0022656F /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D7FE72C8BB4DE0022656F /* ProfileHeaderView.swift */; };
 		201D7FEA2C8BB4F10022656F /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D7FE92C8BB4F10022656F /* PostGridView.swift */; };
 		201D7FED2C8BB9910022656F /* UserStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D7FEC2C8BB9910022656F /* UserStatView.swift */; };
+		201D7FF02C8CE0340022656F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D7FEF2C8CE0340022656F /* Post.swift */; };
+		201D7FF52C8E7D780022656F /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D7FF42C8E7D780022656F /* FeedViewModel.swift */; };
+		201D7FF72C8F6FBA0022656F /* CustomVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D7FF62C8F6FBA0022656F /* CustomVideoPlayer.swift */; };
 		20D029EE2C87C616000433D2 /* TiktokCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D029ED2C87C616000433D2 /* TiktokCloneApp.swift */; };
 		20D029F02C87C616000433D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D029EF2C87C616000433D2 /* ContentView.swift */; };
 		20D029F22C87C618000433D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20D029F12C87C618000433D2 /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 		201D7FE72C8BB4DE0022656F /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		201D7FE92C8BB4F10022656F /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridView.swift; sourceTree = "<group>"; };
 		201D7FEC2C8BB9910022656F /* UserStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatView.swift; sourceTree = "<group>"; };
+		201D7FEF2C8CE0340022656F /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		201D7FF42C8E7D780022656F /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		201D7FF62C8F6FBA0022656F /* CustomVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayer.swift; sourceTree = "<group>"; };
 		20D029EA2C87C616000433D2 /* TiktokClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TiktokClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D029ED2C87C616000433D2 /* TiktokCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiktokCloneApp.swift; sourceTree = "<group>"; };
 		20D029EF2C87C616000433D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +76,30 @@
 				201D7FE52C8A89300022656F /* CurrentUserProfileView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		201D7FF12C8CE06F0022656F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				201D7FF42C8E7D780022656F /* FeedViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		201D7FF22C8E7D0D0022656F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				20D02A0E2C88FEE5000433D2 /* FeedView.swift */,
+				201D7FC12C893E860022656F /* FeedCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		201D7FF32C8E7D2B0022656F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		20D029E12C87C616000433D2 = {
@@ -128,6 +158,7 @@
 		20D029FE2C87C69F000433D2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				201D7FEF2C8CE0340022656F /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,8 +248,9 @@
 		20D02A082C87C78A000433D2 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				20D02A0E2C88FEE5000433D2 /* FeedView.swift */,
-				201D7FC12C893E860022656F /* FeedCell.swift */,
+				201D7FF32C8E7D2B0022656F /* Service */,
+				201D7FF22C8E7D0D0022656F /* View */,
+				201D7FF12C8CE06F0022656F /* ViewModel */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -226,6 +258,7 @@
 		20D02A092C87C78C000433D2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				201D7FF62C8F6FBA0022656F /* CustomVideoPlayer.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -272,7 +305,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					20D029E92C87C616000433D2 = {
 						CreatedOnToolsVersion = 14.3;
@@ -315,10 +348,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				20D02A0F2C88FEE5000433D2 /* FeedView.swift in Sources */,
+				201D7FF72C8F6FBA0022656F /* CustomVideoPlayer.swift in Sources */,
 				201D7FE42C8A76DE0022656F /* NotificationCell.swift in Sources */,
 				201D7FE82C8BB4DE0022656F /* ProfileHeaderView.swift in Sources */,
 				201D7FED2C8BB9910022656F /* UserStatView.swift in Sources */,
 				201D7FC22C893E860022656F /* FeedCell.swift in Sources */,
+				201D7FF52C8E7D780022656F /* FeedViewModel.swift in Sources */,
+				201D7FF02C8CE0340022656F /* Post.swift in Sources */,
 				20D029F02C87C616000433D2 /* ContentView.swift in Sources */,
 				201D7FE22C8A76CB0022656F /* NotificationView.swift in Sources */,
 				20D029EE2C87C616000433D2 /* TiktokCloneApp.swift in Sources */,
@@ -369,6 +405,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -429,6 +466,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
