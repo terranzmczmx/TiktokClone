@@ -13,6 +13,12 @@ struct RegistrationView: View {
     @State private var username = ""
     @State private var fullname = ""
     @Environment(\.dismiss) var dismiss
+    @StateObject var viewModel: RegistrationViewModel
+    
+    init(authService: AuthService) {
+        let vm = RegistrationViewModel(authService: authService)
+        self._viewModel = StateObject(wrappedValue: vm)
+    }
     
     var body: some View {
         VStack {
@@ -45,7 +51,12 @@ struct RegistrationView: View {
             
             // login button
             Button {
-                print("DEBUG: Sign up.")
+                Task {
+                    await viewModel.createUser(withEmail: email,
+                                               password: password,
+                                               fullname: fullname,
+                                               username: username)
+                }
             } label: {
                 Text("Sign Up")
                     .font(.subheadline)
@@ -93,5 +104,5 @@ extension RegistrationView: AuthenticationFormProtocol {
 }
 
 #Preview {
-    RegistrationView()
+    RegistrationView(authService: AuthService())
 }
