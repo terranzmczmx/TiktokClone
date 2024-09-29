@@ -8,7 +8,11 @@
 import FirebaseAuth
 import FirebaseFirestore
 
-struct UserService {
+protocol UserServiceProtocol {
+    func fetchUsers() async throws -> [User]
+}
+
+struct UserService: UserServiceProtocol {
     
     func uploadUserData(_ user: User) async throws {
         do {
@@ -19,4 +23,14 @@ struct UserService {
         }
     }
     
+    func fetchUsers() async throws -> [User] {
+        let snapshot = try await Firestore.firestore().collection("users").getDocuments()
+        return snapshot.documents.compactMap({ try? $0.data(as: User.self) })
+    }
+}
+
+struct MockUserService: UserServiceProtocol {
+    func fetchUsers() async throws -> [User] {
+        return DeveloperPreview.users
+    }
 }
