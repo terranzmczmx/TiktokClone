@@ -56,6 +56,7 @@
 		201D81042CA8E8770022656F /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D81032CA8E8770022656F /* PreviewProvider.swift */; };
 		201D81082CA8EC820022656F /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D81072CA8EC820022656F /* ExploreViewModel.swift */; };
 		201D810A2CAA18A20022656F /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D81092CAA18A20022656F /* UserProfileView.swift */; };
+		201D810C2CAA20780022656F /* Firestore+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D810B2CAA20780022656F /* Firestore+Constants.swift */; };
 		20D029EE2C87C616000433D2 /* TiktokCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D029ED2C87C616000433D2 /* TiktokCloneApp.swift */; };
 		20D029F02C87C616000433D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D029EF2C87C616000433D2 /* ContentView.swift */; };
 		20D029F22C87C618000433D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20D029F12C87C618000433D2 /* Assets.xcassets */; };
@@ -91,6 +92,7 @@
 		201D81032CA8E8770022656F /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		201D81072CA8EC820022656F /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
 		201D81092CAA18A20022656F /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		201D810B2CAA20780022656F /* Firestore+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore+Constants.swift"; sourceTree = "<group>"; };
 		20D029EA2C87C616000433D2 /* TiktokClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TiktokClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D029ED2C87C616000433D2 /* TiktokCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiktokCloneApp.swift; sourceTree = "<group>"; };
 		20D029EF2C87C616000433D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				201D80252C939B5F0022656F /* StandardTextFieldModifier.swift */,
+				201D810B2CAA20780022656F /* Firestore+Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				201D805E2C94F5D40022656F /* LoginViewModel.swift in Sources */,
 				201D81002CA899840022656F /* User.swift in Sources */,
 				201D7FE42C8A76DE0022656F /* NotificationCell.swift in Sources */,
+				201D810C2CAA20780022656F /* Firestore+Constants.swift in Sources */,
 				201D80032C8FD3B50022656F /* RegistrationView.swift in Sources */,
 				201D81022CA89ACF0022656F /* UserService.swift in Sources */,
 				201D81042CA8E8770022656F /* PreviewProvider.swift in Sources */,
