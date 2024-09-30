@@ -6,19 +6,37 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct EditProfileView: View {
+    @State private var selectedPickerItem: PhotosPickerItem?
+    @State private var profileImage: Image?
+    
     var body: some View {
         NavigationStack {
             VStack {
-                VStack {
-                    Circle()
-                        .frame(width: 64, height: 64)
-                    
-                    Button("Change Photo") {
-                        print("DEBUG: change photo...")
+                PhotosPicker(selection: $selectedPickerItem, matching: .images) {
+                    VStack {
+                        if let image = profileImage {
+                            image
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 64, height: 64)
+                                .clipShape(Circle())
+                        } else {
+                            Image(systemName: "person.circle.fill")
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 64, height: 64)
+                                .clipShape(Circle())
+                                .foregroundStyle(Color(.systemGray4))
+                        }
+                        
+                        Text("Change photo")
                     }
-                    .foregroundStyle(.black)
+                }
+                .task(id: selectedPickerItem) {
+                    await loadImage(fromItem: selectedPickerItem)
                 }
                 .padding()
                 
@@ -28,29 +46,11 @@ struct EditProfileView: View {
                         .foregroundStyle(Color(.systemGray2))
                         .fontWeight(.semibold)
                     
-                    HStack {
-                        Text("Name")
-                        
-                        Spacer()
-                        
-                        Text("name...")
-                    }
+                    EditProfileOptionRowView(option: .name, value: "name...")
                     
-                    HStack {
-                        Text("Username")
-                        
-                        Spacer()
-                        
-                        Text("username...")
-                    }
+                    EditProfileOptionRowView(option: .username, value: "username...")
                     
-                    HStack {
-                        Text("Bio")
-                        
-                        Spacer()
-                        
-                        Text("bio...")
-                    }
+                    EditProfileOptionRowView(option: .bio, value: "bio...")
                 }
                 .font(.subheadline)
                 .padding()
@@ -59,6 +59,9 @@ struct EditProfileView: View {
             }
             .navigationTitle("Edit profile")
             .navigationBarTitleDisplayMode(.inline)
+            .navigationDestination(for: EditProfileOptions.self) { option in
+                Text(option.title)
+            }
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button("Cancel") {
@@ -79,6 +82,34 @@ struct EditProfileView: View {
     }
 }
 
+extension EditProfileView {
+    func loadImage(fromItem item: PhotosPickerItem?) async {
+        // photoPickerItem -> data -> UIImage -> Image
+        guard let item else { return }
+        guard let data = try? await item.loadTransferable(type: Data.self) else { return }
+        guard let uiImage = UIImage(data: data) else { return }
+        self.profileImage = Image(uiImage: uiImage)
+    }
+}
+
 #Preview {
     EditProfileView()
+}
+
+struct EditProfileOptionRowView: View {
+    let option: EditProfileOptions
+    let value: String
+    
+    var body: some View {
+        NavigationLink(value: option) {
+            HStack {
+                Text(option.title)
+                
+                Spacer()
+                
+                Text(value)
+            }
+        }
+        .foregroundStyle(.primary)
+    }
 }
