@@ -11,6 +11,9 @@ import PhotosUI
 struct EditProfileView: View {
     @State private var selectedPickerItem: PhotosPickerItem?
     @State private var profileImage: Image?
+    @Environment(\.dismiss) var dismiss
+    
+    let user: User
     
     var body: some View {
         NavigationStack {
@@ -46,11 +49,11 @@ struct EditProfileView: View {
                         .foregroundStyle(Color(.systemGray2))
                         .fontWeight(.semibold)
                     
-                    EditProfileOptionRowView(option: .name, value: "name...")
+                    EditProfileOptionRowView(option: .name, value: user.fullname)
                     
-                    EditProfileOptionRowView(option: .username, value: "username...")
+                    EditProfileOptionRowView(option: .username, value: user.username)
                     
-                    EditProfileOptionRowView(option: .bio, value: "bio...")
+                    EditProfileOptionRowView(option: .bio, value: user.bio ?? "Add a bio")
                 }
                 .font(.subheadline)
                 .padding()
@@ -60,19 +63,19 @@ struct EditProfileView: View {
             .navigationTitle("Edit profile")
             .navigationBarTitleDisplayMode(.inline)
             .navigationDestination(for: EditProfileOptions.self) { option in
-                Text(option.title)
+                EditProfileDetailView(option: option, user: user)
             }
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button("Cancel") {
-                        
+                        dismiss()
                     }
                     .foregroundStyle(.black)
                 }
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Done") {
-                        
+                        dismiss()
                     }
                     .fontWeight(.semibold)
                     .foregroundStyle(.black)
@@ -82,7 +85,7 @@ struct EditProfileView: View {
     }
 }
 
-extension EditProfileView {
+private extension EditProfileView {
     func loadImage(fromItem item: PhotosPickerItem?) async {
         // photoPickerItem -> data -> UIImage -> Image
         guard let item else { return }
@@ -93,23 +96,5 @@ extension EditProfileView {
 }
 
 #Preview {
-    EditProfileView()
-}
-
-struct EditProfileOptionRowView: View {
-    let option: EditProfileOptions
-    let value: String
-    
-    var body: some View {
-        NavigationLink(value: option) {
-            HStack {
-                Text(option.title)
-                
-                Spacer()
-                
-                Text(value)
-            }
-        }
-        .foregroundStyle(.primary)
-    }
+    EditProfileView(user: DeveloperPreview.user)
 }

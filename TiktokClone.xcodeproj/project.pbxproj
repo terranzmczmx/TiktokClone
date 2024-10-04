@@ -59,12 +59,14 @@
 		201D810C2CAA20780022656F /* Firestore+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D810B2CAA20780022656F /* Firestore+Constants.swift */; };
 		201D81122CAA2DD90022656F /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D81112CAA2DD90022656F /* EditProfileView.swift */; };
 		201D81152CAA40820022656F /* EditProfileOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D81142CAA40820022656F /* EditProfileOptions.swift */; };
+		201D81172CAE21B90022656F /* EditProfileDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D81162CAE21B90022656F /* EditProfileDetailView.swift */; };
 		20D029EE2C87C616000433D2 /* TiktokCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D029ED2C87C616000433D2 /* TiktokCloneApp.swift */; };
 		20D029F02C87C616000433D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D029EF2C87C616000433D2 /* ContentView.swift */; };
 		20D029F22C87C618000433D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20D029F12C87C618000433D2 /* Assets.xcassets */; };
 		20D029F52C87C618000433D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20D029F42C87C618000433D2 /* Preview Assets.xcassets */; };
 		20D02A0D2C87DA85000433D2 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D02A0C2C87DA85000433D2 /* MainTabView.swift */; };
 		20D02A0F2C88FEE5000433D2 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D02A0E2C88FEE5000433D2 /* FeedView.swift */; };
+		20EDEF2D2CAF30E100C984CC /* EditProfileOptionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EDEF2C2CAF30E100C984CC /* EditProfileOptionRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +99,7 @@
 		201D810B2CAA20780022656F /* Firestore+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore+Constants.swift"; sourceTree = "<group>"; };
 		201D81112CAA2DD90022656F /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		201D81142CAA40820022656F /* EditProfileOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileOptions.swift; sourceTree = "<group>"; };
+		201D81162CAE21B90022656F /* EditProfileDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileDetailView.swift; sourceTree = "<group>"; };
 		20D029EA2C87C616000433D2 /* TiktokClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TiktokClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D029ED2C87C616000433D2 /* TiktokCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiktokCloneApp.swift; sourceTree = "<group>"; };
 		20D029EF2C87C616000433D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +107,7 @@
 		20D029F42C87C618000433D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		20D02A0C2C87DA85000433D2 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		20D02A0E2C88FEE5000433D2 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		20EDEF2C2CAF30E100C984CC /* EditProfileOptionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileOptionRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +265,8 @@
 			isa = PBXGroup;
 			children = (
 				201D81112CAA2DD90022656F /* EditProfileView.swift */,
+				201D81162CAE21B90022656F /* EditProfileDetailView.swift */,
+				20EDEF2C2CAF30E100C984CC /* EditProfileOptionRowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -570,6 +576,7 @@
 				201D80032C8FD3B50022656F /* RegistrationView.swift in Sources */,
 				201D81022CA89ACF0022656F /* UserService.swift in Sources */,
 				201D81042CA8E8770022656F /* PreviewProvider.swift in Sources */,
+				201D81172CAE21B90022656F /* EditProfileDetailView.swift in Sources */,
 				201D7FE82C8BB4DE0022656F /* ProfileHeaderView.swift in Sources */,
 				201D80262C939B5F0022656F /* StandardTextFieldModifier.swift in Sources */,
 				201D805C2C94DE6F0022656F /* AuthService.swift in Sources */,
@@ -582,6 +589,7 @@
 				201D80602C94F6EF0022656F /* RegistrationViewModel.swift in Sources */,
 				20D029F02C87C616000433D2 /* ContentView.swift in Sources */,
 				201D7FE22C8A76CB0022656F /* NotificationView.swift in Sources */,
+				20EDEF2D2CAF30E100C984CC /* EditProfileOptionRowView.swift in Sources */,
 				201D81122CAA2DD90022656F /* EditProfileView.swift in Sources */,
 				201D81152CAA40820022656F /* EditProfileOptions.swift in Sources */,
 				201D81082CA8EC820022656F /* ExploreViewModel.swift in Sources */,
