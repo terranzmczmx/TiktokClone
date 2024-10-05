@@ -69,6 +69,9 @@
 		20EDEF2D2CAF30E100C984CC /* EditProfileOptionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EDEF2C2CAF30E100C984CC /* EditProfileOptionRowView.swift */; };
 		20EDEF302CAFC23600C984CC /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EDEF2F2CAFC23600C984CC /* ImageUploader.swift */; };
 		20EDEF332CB0732800C984CC /* EditProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EDEF322CB0732800C984CC /* EditProfileManager.swift */; };
+		20EDEF362CB0BE7C00C984CC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 20EDEF352CB0BE7C00C984CC /* Kingfisher */; };
+		20EDEF3B2CB0BEC700C984CC /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EDEF3A2CB0BEC700C984CC /* AvatarView.swift */; };
+		20EDEF3D2CB0C0D000C984CC /* AvatarSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EDEF3C2CB0C0D000C984CC /* AvatarSize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +115,8 @@
 		20EDEF2C2CAF30E100C984CC /* EditProfileOptionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileOptionRowView.swift; sourceTree = "<group>"; };
 		20EDEF2F2CAFC23600C984CC /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		20EDEF322CB0732800C984CC /* EditProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileManager.swift; sourceTree = "<group>"; };
+		20EDEF3A2CB0BEC700C984CC /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		20EDEF3C2CB0C0D000C984CC /* AvatarSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarSize.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +136,7 @@
 				201D803A2C93CCC00022656F /* FirebaseAuthCombine-Community in Frameworks */,
 				201D804E2C93CCC00022656F /* FirebaseMessaging in Frameworks */,
 				201D80302C93CCC00022656F /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				20EDEF362CB0BE7C00C984CC /* Kingfisher in Frameworks */,
 				201D80562C93CCC00022656F /* FirebaseStorage in Frameworks */,
 				201D80462C93CCC00022656F /* FirebaseFunctions in Frameworks */,
 				201D804C2C93CCC00022656F /* FirebaseInstallations in Frameworks */,
@@ -450,6 +456,7 @@
 		20D02A092C87C78C000433D2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				20EDEF372CB0BE9F00C984CC /* Avatar */,
 				201D7FF62C8F6FBA0022656F /* CustomVideoPlayer.swift */,
 			);
 			path = Components;
@@ -488,6 +495,31 @@
 				20EDEF322CB0732800C984CC /* EditProfileManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		20EDEF372CB0BE9F00C984CC /* Avatar */ = {
+			isa = PBXGroup;
+			children = (
+				20EDEF392CB0BEAE00C984CC /* ViewModel */,
+				20EDEF382CB0BEAA00C984CC /* View */,
+			);
+			path = Avatar;
+			sourceTree = "<group>";
+		};
+		20EDEF382CB0BEAA00C984CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				20EDEF3A2CB0BEC700C984CC /* AvatarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		20EDEF392CB0BEAE00C984CC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				20EDEF3C2CB0C0D000C984CC /* AvatarSize.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -530,6 +562,7 @@
 				201D80552C93CCC00022656F /* FirebaseStorage */,
 				201D80572C93CCC00022656F /* FirebaseStorageCombine-Community */,
 				201D80592C93CCC00022656F /* FirebaseVertexAI-Preview */,
+				20EDEF352CB0BE7C00C984CC /* Kingfisher */,
 			);
 			productName = TiktokClone;
 			productReference = 20D029EA2C87C616000433D2 /* TiktokClone.app */;
@@ -561,6 +594,7 @@
 			mainGroup = 20D029E12C87C616000433D2;
 			packageReferences = (
 				201D802B2C93CA130022656F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				20EDEF342CB0BE7C00C984CC /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 20D029EB2C87C616000433D2 /* Products */;
 			projectDirPath = "";
@@ -600,7 +634,9 @@
 				201D81042CA8E8770022656F /* PreviewProvider.swift in Sources */,
 				201D81172CAE21B90022656F /* EditProfileDetailView.swift in Sources */,
 				201D7FE82C8BB4DE0022656F /* ProfileHeaderView.swift in Sources */,
+				20EDEF3D2CB0C0D000C984CC /* AvatarSize.swift in Sources */,
 				201D80262C939B5F0022656F /* StandardTextFieldModifier.swift in Sources */,
+				20EDEF3B2CB0BEC700C984CC /* AvatarView.swift in Sources */,
 				201D805C2C94DE6F0022656F /* AuthService.swift in Sources */,
 				201D80622C9502FD0022656F /* ContentViewModel.swift in Sources */,
 				201D7FED2C8BB9910022656F /* UserStatView.swift in Sources */,
@@ -839,6 +875,14 @@
 				minimumVersion = 11.2.0;
 			};
 		};
+		20EDEF342CB0BE7C00C984CC /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -956,6 +1000,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 201D802B2C93CA130022656F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseVertexAI-Preview";
+		};
+		20EDEF352CB0BE7C00C984CC /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20EDEF342CB0BE7C00C984CC /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ExploreView: View {
-    @StateObject var viewModel = ExploreViewModel(userService: MockUserService())
+    @StateObject var viewModel = ExploreViewModel(userService: UserService())
     
     var body: some View {
         NavigationStack {

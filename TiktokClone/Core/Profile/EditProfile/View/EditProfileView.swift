@@ -28,15 +28,10 @@ struct EditProfileView: View {
                             image
                                 .resizable()
                                 .scaledToFill()
-                                .frame(width: 64, height: 64)
+                                .frame(width: avatarSize.dimension, height: avatarSize.dimension)
                                 .clipShape(Circle())
                         } else {
-                            Image(systemName: "person.circle.fill")
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 64, height: 64)
-                                .clipShape(Circle())
-                                .foregroundStyle(Color(.systemGray4))
+                            AvatarView(user: user, size: .large)
                         }
                         
                         Text("Change photo")
@@ -90,6 +85,10 @@ struct EditProfileView: View {
 }
 
 private extension EditProfileView {
+    var avatarSize: AvatarSize {
+        return .large
+    }
+    
     func loadImage(fromItem item: PhotosPickerItem?) async {
         // photoPickerItem -> data -> UIImage -> Image
         guard let item else { return }

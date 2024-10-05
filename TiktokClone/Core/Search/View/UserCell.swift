@@ -12,10 +12,7 @@ struct UserCell: View {
     
     var body: some View {
         HStack(spacing: 12) {
-            Image(systemName: "person.circle.fill")
-                .resizable()
-                .frame(width: 48, height: 48)
-                .foregroundStyle(Color(.systemGray5))
+            AvatarView(user: user, size: .medium)
             
             VStack(alignment: .leading) {
                 Text(user.username)
